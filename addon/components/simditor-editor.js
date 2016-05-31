@@ -28,8 +28,9 @@ export default Ember.Component.extend({
             defaultImage: self.defaultImage,
             placeholder: self.placeholder,
             params: self.params || {}
-        }
+        };
 
+        Simditor.locale = 'en-US';
         let editor = new Simditor(options);
         if(typeof this.value === 'string'){
             editor.setValue(this.value);
